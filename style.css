@@ -11,7 +11,7 @@ html {
 /* Design tokens */
 :root {
   --clr-primary: hsl(75, 94%, 57%);
-  --clr-whtie: #fff;
+  --clr-white: #fff;
   --clr-slate-700: hsl(0, 0%, 20%);
   --clr-slate-800: hsl(0, 0%, 12%);
   --clr-slate-900: hsl(0, 0%, 8%);
@@ -28,13 +28,13 @@ html {
 }
 
 *:focus {
-  outline: none;
+  outline: none; /*replaces with box-shadow instead, more beautiful*/
 }
 
 a:focus,
-btn:focus,
+button:focus,
 input:focus {
-  box-shadow: 0 0 0 0.2rem var(--clr-primary);
+  box-shadow: 0 0 0 0.2rem var(--clr-slate-900);
 }
 
 /* GENERAL STYLES */
@@ -100,7 +100,7 @@ address {
 .socials-card__btn:visited {
   font-weight: 600;
   text-decoration: none;
-  color: var(--clr-whtie);
+  color: var(--clr-white);
   background-color: var(--clr-slate-700);
   width: 100%;
   display: inline-block;
