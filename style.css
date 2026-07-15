@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "Inter";
+  src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+  /* Provided a local font first, but it looked different, so decided to just use the one that can be downloaded */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Design tokens */
+:root {
+  --clr-primary: hsl(75, 94%, 57%);
+  --clr-whtie: #fff;
+  --clr-slate-700: hsl(0, 0%, 20%);
+  --clr-slate-800: hsl(0, 0%, 12%);
+  --clr-slate-900: hsl(0, 0%, 8%);
+}
+
+/* fontsize: 1.4rem for body */
+/* fontweights 400 600 700 */
+
+/* RESET STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+a:focus,
+btn:focus,
+input:focus {
+  box-shadow: 0 0 0 0.2rem var(--clr-primary);
+}
+
+/* GENERAL STYLES */
+body {
+  font-family: "Inter";
+  line-height: 1;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--clr-slate-900);
+  padding: 0 2.4rem;
+}
+
+/* COMPONENT STYLES */
+.socials-card {
+  max-width: 40rem;
+  text-align: center;
+  background-color: var(--clr-slate-800);
+  padding: 2rem;
+  border-radius: 0.8rem;
+  color: #fff;
+}
+
+.socials-card__avatar {
+  border-radius: 50%;
+  width: 6.4rem;
+  margin-bottom: 2.4rem;
+}
+
+address {
+  font-style: normal;
+}
+
+.socials-card__author {
+  font-size: 2.4rem;
+  line-height: 1.1;
+  letter-spacing: -0.2px;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.socials-card__location {
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--clr-primary);
+  margin-bottom: 1.6rem;
+}
+
+.socials-card__bio {
+  line-height: 1.5;
+  margin-bottom: 3.2rem;
+}
+
+.socials-card__links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.socials-card__btn:link,
+.socials-card__btn:visited {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--clr-whtie);
+  background-color: var(--clr-slate-700);
+  width: 100%;
+  display: inline-block;
+  padding: 1.2rem 2.4rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.socials-card__btn:hover,
+.socials-card__btn:active {
+  background-color: var(--clr-primary);
+  color: var(--clr-slate-900);
+}
+
+/* RESPONSIVE STYLES */
+/* note: normally I'd use em with base font-size of 16px but this is just a quick one... */
+@media (max-width: 341px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* Tablet screens */
+@media (min-width: 750px) {
+  .socials-card {
+    padding: 3.2rem 3.2rem 2.4rem;
+  }
+}
